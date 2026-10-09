@@ -1,5 +1,7 @@
 # tier-router
 
+English | [繁體中文](README.zh-TW.md)
+
 A Claude Code mod that routes each delegated subagent to the cheapest model tier that can do the job.
 The orchestrator keeps running on your session model (Fable, Opus, ...) and writes the brief; before
 the subagent starts, a cheap classifier reads the brief, picks a tier, and the mod fills the model.
@@ -25,11 +27,13 @@ Each decision costs one small classifier call (default `haiku`, `effort: low`, 6
 
 ## Install
 
-From a GitHub repository holding this folder:
+At a Claude Code terminal prompt:
 
 ```
-/plugin install tier-router --marketplace <owner>/<repo>
+/plugin install tier-router --marketplace GuanweiPan/tier-router
 ```
+
+Answer `y` to add the marketplace, then pick a scope (user makes it available in every project).
 
 Or run it from the folder for one session:
 
