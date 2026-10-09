@@ -1,0 +1,65 @@
+{
+  "name": "tier-router",
+  "version": "0.1.0",
+  "description": "Routes each delegated subagent brief to the cheapest model tier that can do it",
+  "author": {
+    "name": "GuanweiPan",
+    "url": "https://github.com/GuanweiPan"
+  },
+  "userConfig": {
+    "enabled": {
+      "type": "boolean",
+      "title": "Enabled",
+      "description": "Route subagent spawns by tier",
+      "default": true
+    },
+    "classifierModel": {
+      "type": "string",
+      "title": "Classifier model",
+      "description": "Model that judges each brief",
+      "default": "haiku"
+    },
+    "lightModel": {
+      "type": "string",
+      "title": "Light tier model",
+      "description": "Mechanical work checked at a glance",
+      "default": "haiku"
+    },
+    "smallModel": {
+      "type": "string",
+      "title": "Small tier model",
+      "description": "Needs reading, specified well enough to check",
+      "default": "sonnet"
+    },
+    "midModel": {
+      "type": "string",
+      "title": "Mid tier model",
+      "description": "Implementation with tests, diagnosis, measurement",
+      "default": "opus"
+    },
+    "minConfidence": {
+      "type": "number",
+      "title": "Minimum confidence",
+      "description": "Below this the spawn inherits the session model",
+      "default": 0.5
+    },
+    "agentTypes": {
+      "type": "string",
+      "title": "Agent types to route",
+      "description": "Comma-separated subagent types without a model of their own",
+      "default": "general-purpose,claude,Explore,Plan"
+    },
+    "announce": {
+      "type": "boolean",
+      "title": "Announce",
+      "description": "Show the chosen tier under the Agent call",
+      "default": true
+    },
+    "timeoutMs": {
+      "type": "number",
+      "title": "Classifier timeout (ms)",
+      "description": "Fail open after this long",
+      "default": 8000
+    }
+  }
+}

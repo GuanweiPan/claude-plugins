@@ -1,0 +1,13 @@
+{
+  "name": "tier-router",
+  "description": "Delegation tier router mod for Claude Code",
+  "owner": {
+    "name": "GuanweiPan"
+  },
+  "plugins": [
+    {
+      "name": "tier-router",
+      "source": "./"
+    }
+  ]
+}
