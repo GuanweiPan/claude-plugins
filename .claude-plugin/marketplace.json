@@ -1,13 +1,15 @@
 {
-  "name": "tier-router",
-  "description": "Delegation tier router mod for Claude Code",
+  "name": "gwpan-plugins",
+  "description": "GuanweiPan's Claude Code plugins",
   "owner": {
-    "name": "GuanweiPan"
+    "name": "GuanweiPan",
+    "url": "https://github.com/GuanweiPan"
   },
   "plugins": [
     {
       "name": "tier-router",
-      "source": "./"
+      "source": "./plugins/tier-router",
+      "description": "Routes each delegated subagent brief to the cheapest model tier that can do it"
     }
   ]
 }
